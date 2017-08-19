@@ -8,7 +8,7 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
-    "angular-bootstrap-datetimepicker": "^1.1.4",
+    "react-bootstrap-datetimepicker": "^1.1.4",
     "axios": "^0.16.1",
     "express": "^4.15.2",
     "jquery": "2.2.4",
