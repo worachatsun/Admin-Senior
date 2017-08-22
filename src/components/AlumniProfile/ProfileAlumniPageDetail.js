@@ -2,18 +2,9 @@ import React, { Component } from 'react'
 import SideNavBar from '../SideNavBar'
 import TopNavBar from '../TopNavBar'
 import Footer from '../Footer'
-
 import PageAward from './ProfilePageDetail(separate)/ProfileAlumniPageAward'
-import PageAwardEdit from './ProfilePageDetail(separate)/ProfileAlumniPageEditAward'
-import PageAwardAdd from './ProfilePageDetail(separate)/ProfileAlumniPageAddAward'
-
 import PageCareer from './ProfilePageDetail(separate)/ProfileAlumniPageCareer'
-import PageCareerEdit from './ProfilePageDetail(separate)/ProfileAlumniPageEditCareer'
-import PageCareerAdd from './ProfilePageDetail(separate)/ProfileAlumniPageAddCareer'
-
 import PageGraduate from './ProfilePageDetail(separate)/ProfileAlumniPageGraduate'
-import PageGraduateEdit from './ProfilePageDetail(separate)/ProfileAlumniPageEditGraduate'
-import PageGraduateAdd from './ProfilePageDetail(separate)/ProfileAlumniPageAddGraduate'
 
 import { Router, Route, Link, hashHistory } from 'react-router'
 class ProfileAlumniPageDetail extends Component {

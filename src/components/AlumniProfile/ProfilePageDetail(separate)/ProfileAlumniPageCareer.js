@@ -21,18 +21,10 @@ class ProfileAlumniPageCareer extends Component {
                             <h4 className="heading">{this.state.career_title}</h4>
                             <blockquote className="message">{this.state.career_text}</blockquote>
                             <br />
-                            <Link to='' className="btn btn-info"><i className="fa fa-edit m-right-xs" />Edit</Link>
                         </div>
                         <br />
                     </li>
                 </ul>
-                <div className="col-md-5 col-sm-5 col-xs-12 form-group pull-right ">
-                    <div className="input-group">
-                        <span className="input-group-btn">
-                            <Link to='' className="btn btn-default btn-lg"><i className="fa fa-plus" /> Add Award</Link>
-                        </span>
-                    </div>
-                </div>
             </div>
         )
     }

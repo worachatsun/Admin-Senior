@@ -25,10 +25,14 @@ export const UPDATE_DONATES = 'update_donates'
 
 export const SELECT_ALUMNI = 'select_alumni'
 export const FETCH_ALL_ALUMNI = 'fetch_all_alumni'
-export const VIEW_ALUMNI = 'profile_alumni'
+export const FETCH_ALUMNI = 'fetch_alumni'
 export const UPDATE_ALUMNI = 'update_alumni'
 
 export const AUTH_ADMIN = 'authen_admin'
+export const UNAUTH_ADMIN = 'unauth_admin'
+
+export const FETCH_CHAT = 'fetch_chat'
+export const FETCH_All_CHAT = 'fetch_all_chat'
 
 export const ADD_ALERT = 'add_alert'
 export const REMOVE_ALERT = 'remove_alert'
