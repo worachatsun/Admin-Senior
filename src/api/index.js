@@ -7,10 +7,10 @@ exports.UPDATE_EDIT_NEWS_URL = `${API_URL}/editNews`
 exports.POST_CREATE_EVENTS_URL = `${API_URL}/createEvent`
 exports.GETEVENTS_URL = `${API_URL}/getEvent`
 exports.UPDATE_EDIT_EVENTS_URL = `${API_URL}/editEvent`
+exports.GET_JOINED_EVENT = `${API_URL}/getJoinedEvent`
 
 exports.POST_CREATE_CAREERS_URL = `${API_URL}/createCareer`
 exports.GETCAREERS_URL = `${API_URL}/getCareer`
-exports.GET_ALL_CAREERS_URL = `${API_URL}/getAllCareer`
 exports.UPDATE_EDIT_CAREERS_URL = `${API_URL}/editCareer`
 
 exports.POST_CREATE_DONATES_URL = `${API_URL}/createDonation`
@@ -20,3 +20,6 @@ exports.UPDATE_EDIT_DONATES_URL = `${API_URL}/editDonation`
 exports.SIGNIN_URL = `${API_URL}/adminSignin`
 exports.REGISTER_URL = `${API_URL}/register`
 exports.RESET_PASSWORD_URL = `${API_URL}/resetPassword`
+
+exports.POST_SEND_CHAT = `${API_URL}/pushChat`
+exports.POST_FETCH_CHAT = `${API_URL}/fetchChat`

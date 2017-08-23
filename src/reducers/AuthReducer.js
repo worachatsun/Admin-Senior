@@ -10,7 +10,7 @@ export default ( state = INITIAL_STATE, action ) => {
             return {
                 admin_detail: action.payload
             }
-        case UNAUTH_USER :
+        case UNAUTH_ADMIN :
             return {
                 admin_detail: INITIAL_STATE
             }

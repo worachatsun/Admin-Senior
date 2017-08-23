@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { POST_CREATE_EVENTS_URL , UPDATE_EDIT_EVENTS_URL } from '../api'
+import { POST_CREATE_EVENTS_URL , UPDATE_EDIT_EVENTS_URL , GETEVENTS_URL , GET_JOINED_EVENT } from '../api'
 import { ADD_EVENTS , SELECT_EVENTS , FETCH_ALL_EVENTS , VIEW_EVENTS , FETCH_JOINER_EVENTS , UPDATE_EVENTS } from './types'
 
 export const selectEvent = (eventId) => {
@@ -40,25 +40,9 @@ export const createEvents = event => {
     }
 }
 
-export const fetchEvent = (offset=0, limit=15) => {
-    const promise = axios.get(`${GET_EVENT_URL}/${offset}/${limit}`)
-    
-    return (dispatch) => {
-        return promise.then(({data}) => {
-            dispatch({
-                type: FETCH_EVENT,
-                payload: data
-            })
-        }).catch(error => {
-            dispatch(addAlert('fetch news'))
-        })
-    }
-}
-
-
 export const editEvents = events => {
     console.log(events)
-    const promise = axios.post(UPDATE_EDIT_EVENTS_URL, {
+    const promise = axios.put(UPDATE_EDIT_EVENTS_URL, {
             "event_name": events.event_name,
             "event_text": events.event_text,
             "picture": events.picture,
@@ -80,6 +64,37 @@ export const editEvents = events => {
         promise.then(({data}) => {
             dispatch({
                 type: UPDATE_EVENTS,
+                payload: data
+            })
+        })
+    }
+}
+
+export const fetchEvent = (offset=0, limit=15) => {
+    const promise = axios.get(`${GET_EVENT_URL}/${offset}/${limit}`)
+    
+    return (dispatch) => {
+        return promise.then(({data}) => {
+            dispatch({
+                type: FETCH_EVENT,
+                payload: data
+            })
+        }).catch(error => {
+            dispatch(addAlert('fetch news'))
+        })
+    }
+}
+
+export const getJoiner = (user_id , event_id) => (dispatch) => {
+        promise = axios.post( GET_JOINED_EVENT , {
+            "user_id" : user_id,
+            "join_event": event_id
+        })
+
+    return (dispatch) => {
+        promise.then(({data}) => {
+            dispatch({
+                type: GET_JOINED_EVENT,
                 payload: data
             })
         })

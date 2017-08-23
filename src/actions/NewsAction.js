@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { POST_CREATE_NEWS_URL , GETNEWS_URL , UPDATE_EDIT_NEWS_URL } from '../api'
-import { ADD_NEWS , FETCH_NEWS , FETCH_ALL_NEWS} from './types'
+import { ADD_NEWS , FETCH_NEWS , FETCH_ALL_NEWS , UPDATE_NEWS } from './types'
 import { addAlert } from './AlertActions'
 
 export const selectNews = (newsId) => {
@@ -40,7 +40,7 @@ export const editNews = (newsId ,news) => {
         "picture": news.picture,
         "category": news.category,
         "news_role": news.news_role,
-        "expiry_date": news.expiry_date
+       //"expiry_date": news.expiry_date
     })
 
     return (dispatch) => {
@@ -55,7 +55,6 @@ export const editNews = (newsId ,news) => {
 
 export const fetchNews = (offset=0, limit=15) => {
     const promise = axios.get(`${GETNEWS_URL}/${offset}/${limit}`)
-    
     return (dispatch) => {
         return promise.then(({data}) => {
             dispatch({
