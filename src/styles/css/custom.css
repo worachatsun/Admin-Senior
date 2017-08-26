@@ -326,7 +326,10 @@ html , body{
     border-bottom: 1px solid #D9DEE4;
     margin-bottom: 10px;
     width: 100%;
-    position: relative
+    position: relative;
+    -webkit-box-shadow: 0px 6px 20px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 20px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 20px -8px rgba(0,0,0,0.75);
 }
 @media (min-width: 480px) {
     .nav_menu {
@@ -1061,7 +1064,10 @@ h2 {
     -moz-column-break-inside: avoid;
     column-break-inside: avoid;
     opacity: 1;
-    transition: all .2s ease
+    transition: all .2s ease;
+    -webkit-box-shadow: 0px 6px 20px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 20px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 20px -8px rgba(0,0,0,0.75);
 }
 .x_title {
     border-bottom: 2px solid #E6E9ED;

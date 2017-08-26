@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import '../../styles/css/chats/re.css'
-import '../../styles/css/chats/chat.css'
-
 import SideNavBar from '../SideNavBar'
 import TopNavBar from '../TopNavBar'
 import Footer from '../Footer'
-import $ from 'jquery'
+import '../../styles/css/chats/chat.css'
+import { Link } from 'react-router';
 
 class InboxPageContent extends Component {
     render() {
+
         return (
             <div>
                 <SideNavBar />
@@ -24,248 +23,52 @@ class InboxPageContent extends Component {
                         <div className="row">
                             <div className="col-md-12 col-sm-12 col-xs-12">
                                 <div className="x_panel">
-                                    <div className="x_title">
-                                        <h2>Inbox Message</h2>
-                                        <div className="clearfix" />
-                                    </div>
-                                    <div className="x_content">
-                                        <div className="wrapper-chat">
-                                            <div className="chatcontent">
-                                                <div className="left">
-                                                    <div className="top">
-                                                        <input type="text" placeholder="Find Person to Talk.." />
-                                                        <a href="javascript:;" className="search"></a>
+                                    <div className="chat-list">
+                                        <div className="header">
+                                            <h2 className="chat-title">Chats</h2>
+                                            <div style={{ padding: 16 }}><svg fill="currentColor" height={24} viewBox="0 0 24 24" width={24} xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" /><path d="M0 0h24v24H0z" fill="none" /></svg></div>
+                                        </div>
+                                        <div className="chat-wrap-all">
+                                            <div className="chat-list-member">
+                                                <li className="chat-member">
+                                                    <Link to='/Inbox/conversation' className="link">
+                                                        <img src={require("../../styles/images/img.jpg")} alt className="img-member" />
+                                                        <div className="chat">
+                                                            <div className="title">
+                                                                Pitawat Pisatsudjja
                                                     </div>
-                                                    <ul className="people" id="style-1">
-                                                        <li className="person" data-chat="person1">
-                                                            <img src="http://s13.postimg.org/ih41k9tqr/img1.jpg" alt="" />
-                                                            <span className="name">Thomas Bangalter</span>
-                                                            <span className="time">2:09 PM</span>
-                                                            <span className="preview">I was wondering...</span>
-                                                        </li>
-                                                        <li className="person" data-chat="person2">
-                                                            <img src="http://s3.postimg.org/yf86x7z1r/img2.jpg" alt="" />
-                                                            <span className="name">Dog Woofson</span>
-                                                            <span className="time">1:44 PM</span>
-                                                            <span className="preview">I've forgotten how it felt before</span>
-                                                        </li>
-                                                        <li className="person" data-chat="person3">
-                                                            <img src="http://s3.postimg.org/h9q4sm433/img3.jpg" alt="" />
-                                                            <span className="name">Louis CK</span>
-                                                            <span className="time">2:09 PM</span>
-                                                            <span className="preview">But we’re probably gonna need a new carpet.</span>
-                                                        </li>
-                                                        <li className="person" data-chat="person4">
-                                                            <img src="http://s3.postimg.org/quect8isv/img4.jpg" alt="" />
-                                                            <span className="name">Bo Jackson</span>
-                                                            <span className="time">2:09 PM</span>
-                                                            <span className="preview">It’s not that bad...</span>
-                                                        </li>
-                                                        <li className="person" data-chat="person5">
-                                                            <img src="http://s16.postimg.org/ete1l89z5/img5.jpg" alt="" />
-                                                            <span className="name">Michael Jordan</span>
-                                                            <span className="time">2:09 PM</span>
-                                                            <span className="preview">Wasup for the third time like is you bling bitch</span>
-                                                        </li>
-                                                        <li className="person" data-chat="person6">
-                                                            <img src="http://s30.postimg.org/kwi7e42rh/img6.jpg" alt="" />
-                                                            <span className="name">Drake</span>
-                                                            <span className="time">2:09 PM</span>
-                                                            <span className="preview">howdoyoudoaspace</span>
-                                                        </li>
-                                                        <li className="person" data-chat="person7">
-                                                            <img src="http://s30.postimg.org/kwi7e42rh/img6.jpg" alt="" />
-                                                            <span className="name">Drake</span>
-                                                            <span className="time">2:09 PM</span>
-                                                            <span className="preview">howdoyoudoaspace</span>
-                                                        </li>
-                                                        <li className="person" data-chat="person6">
-                                                            <img src="http://s30.postimg.org/kwi7e42rh/img6.jpg" alt="" />
-                                                            <span className="name">Drake</span>
-                                                            <span className="time">2:09 PM</span>
-                                                            <span className="preview">howdoyoudoaspace</span>
-                                                        </li>
-                                                        <li className="person" data-chat="person7">
-                                                            <img src="http://s30.postimg.org/kwi7e42rh/img6.jpg" alt="" />
-                                                            <span className="name">Drake</span>
-                                                            <span className="time">2:09 PM</span>
-                                                            <span className="preview">howdoyoudoaspace</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="right">
-                                                    <div className="top"><span>To: <span className="name">Dog Woofson</span></span>
+                                                            <div className="desc">
+                                                                <span style={{ color: 'rgb(33, 150, 243)' }}>me: </span>chat si chatttt
                                                     </div>
-                                                    <div className="chat" data-chat="person1">
-                                                        <div className="conversation-start">
-                                                            <span>Today, 6:48 AM</span>
                                                         </div>
-                                                        <div className="bubble you">
-                                                            Hello,
+                                                    </Link>
+                                                </li>
+                                                <li className="chat-member">
+                                                    <Link to='/Inbox/conversation' className="link">
+                                                        <img src={require("../../styles/images/img.jpg")} alt className="img-member" />
+                                                        <div className="chat">
+                                                            <div className="title">
+                                                                Pitawat Pisatsudjja
                                                     </div>
-                                                        <div className="bubble you">
-                                                            it's me.
+                                                            <div className="desc">
+                                                                <span style={{ color: 'rgb(33, 150, 243)' }}>me: </span>chat si chatttt
                                                     </div>
-                                                        <div className="bubble you">
-                                                            I was wondering...
-                                                    </div>
-
-                                                    </div>
-                                                    <div className="chat" data-chat="person2">
-                                                        <div     id="style-1">
-                                                            <div className="conversation-start">
-                                                                <span>Today, 5:38 PM</span>
-                                                            </div>
-                                                            <div className="bubble you">
-                                                                Hello, can you hear me?
                                                         </div>
-                                                            <div className="bubble you">
-                                                                I'm in California dreaming
+                                                    </Link>
+                                                </li>
+                                                <li className="chat-member">
+                                                    <Link to='/Inbox/conversation' className="link">
+                                                        <img src={require("../../styles/images/img.jpg")} alt className="img-member" />
+                                                        <div className="chat">
+                                                            <div className="title">
+                                                                Pitawat Pisatsudjja
+                                                    </div>
+                                                            <div className="desc">
+                                                                <span style={{ color: 'rgb(33, 150, 243)' }}>me: </span>chat si chatttt
+                                                    </div>
                                                         </div>
-                                                            <div className="bubble me">
-                                                                ... about who we used to be.
-                                                        </div>
-                                                            <div className="bubble me">
-                                                                Are you serious?
-                                                        </div>
-                                                            <div className="bubble you">
-                                                                When we were younger and free...
-                                                        </div>
-                                                            <div className="bubble you">
-                                                                I've forgotten how it felt before
-                                                        </div>
-                                                            <div className="bubble you">
-                                                                Hello, can you hear me?
-                                                        </div>
-                                                            <div className="bubble you">
-                                                                I'm in California dreaming
-                                                        </div>
-                                                            <div className="bubble me">
-                                                                ... about who we used to be.
-                                                        </div>
-                                                            <div className="bubble me">
-                                                                Are you serious?
-                                                        </div>
-                                                            <div className="bubble you">
-                                                                When we were younger and free...
-                                                        </div>
-                                                            <div className="bubble you">
-                                                                I've forgotten how it felt before
-                                                        </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <div className="chat" data-chat="person3">
-                                                        <div className="conversation-start">
-                                                            <span>Today, 3:38 AM</span>
-                                                        </div>
-                                                        <div className="bubble you">
-                                                            Hey human!
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            Umm... Someone took a shit in the hallway.
-                                                    </div>
-                                                        <div className="bubble me">
-                                                            ... what.
-                                                    </div>
-                                                        <div className="bubble me">
-                                                            Are you serious?
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            I mean...
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            It’s not that bad...
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            But we’re probably gonna need a new carpet.
-                                                    </div>
-                                                    </div>
-                                                    <div className="chat" data-chat="person4">
-                                                        <div className="conversation-start">
-                                                            <span>Yesterday, 4:20 PM</span>
-                                                        </div>
-                                                        <div className="bubble me">
-                                                            Hey human!
-                                                    </div>
-                                                        <div className="bubble me">
-                                                            Umm... Someone took a shit in the hallway.
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            ... what.
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            Are you serious?
-                                                    </div>
-                                                        <div className="bubble me">
-                                                            I mean...
-                                                    </div>
-                                                        <div className="bubble me">
-                                                            It’s not that bad...
-                                                    </div>
-                                                    </div>
-                                                    <div className="chat" data-chat="person5">
-                                                        <div className="conversation-start">
-                                                            <span>Today, 6:28 AM</span>
-                                                        </div>
-                                                        <div className="bubble you">
-                                                            Wasup
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            Wasup
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            Wasup for the third time like is <br />you bling bitch
-                                                    </div>
-
-                                                    </div>
-                                                    <div className="chat" data-chat="person6">
-                                                        <div className="conversation-start">
-                                                            <span>Monday, 1:27 PM</span>
-                                                        </div>
-                                                        <div className="bubble you">
-                                                            So, how's your new phone?
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            You finally have a smartphone :D
-                                                    </div>
-                                                        <div className="bubble me">
-                                                            Drake?
-                                                    </div>
-                                                        <div className="bubble me">
-                                                            Why aren't you answering?
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            howdoyoudoaspace
-                                                    </div>
-                                                    </div>
-                                                    <div className="chat" data-chat="person7">
-                                                        <div className="conversation-start">
-                                                            <span>Monday, 1:27 PM</span>
-                                                        </div>
-                                                        <div className="bubble you">
-                                                            So, how's your new phone?
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            You finally have a smartphone :D
-                                                    </div>
-                                                        <div className="bubble me">
-                                                            Drake?
-                                                    </div>
-                                                        <div className="bubble me">
-                                                            Why aren't you answering?
-                                                    </div>
-                                                        <div className="bubble you">
-                                                            howdoyoudoaspace
-                                                    </div>
-                                                    </div>
-                                                    <div className="write">
-                                                        <a className="write-link attach" />
-                                                        <input type="file" id="upload" name="upload" style={{ visibility: 'hidden', width: 1, height: 1 }} multiple />
-                                                        <input type="text" />
-                                                        <a href="javascript:;" className="write-link send" />
-                                                    </div>
-                                                </div>
+                                                    </Link>
+                                                </li>
                                             </div>
                                         </div>
                                     </div>

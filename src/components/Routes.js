@@ -24,6 +24,7 @@ import Login from './Authentication/Login'
 import Regis from './Authentication/Register'
 import Reset from './Authentication/ResetPassword'
 import ResetSuccessful from './Authentication/ResetSuccessful'
+import InboxConversation from './Inboxmessage/ChatConversation'
 import { Router, Route, Link, hashHistory } from 'react-router'
 
 class Routes extends Component {
@@ -62,6 +63,7 @@ class Routes extends Component {
                 <Route path="/Alumni/Edit" component={profileEdit} />
                 
                 <Route path="/Inbox" component={Inbox} />
+                <Route path="/Inbox/conversation" component={InboxConversation} />
             </Router>
         );
     }
