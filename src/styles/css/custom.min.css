@@ -1441,8 +1441,8 @@ a.star {
     text-align: left;
     width: 100%}
 .btn,.buttons,.modal-footer .btn+.btn,button {
-    margin-bottom: 5px;
-    margin-right: 5px}
+    margin-bottom: 0px;
+    margin-right: 0px}
 .btn-group .btn,.btn-group-vertical .btn {
     margin-bottom: 0;
     margin-right: 0}
