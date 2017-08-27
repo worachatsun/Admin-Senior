@@ -1325,7 +1325,11 @@ h4.graph_title {
     -moz-background-clip: padding;
     border-radius: 5px;
     background: #FFF;
-    transition: all .3s ease-in-out}
+    transition: all .3s ease-in-out;
+    -webkit-box-shadow: 1px 3px 20px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 3px 20px -8px rgba(0,0,0,0.75);
+    box-shadow: 1px 3px 20px -8px rgba(0,0,0,0.75);
+    }
 .tile-stats:hover .icon i {
     animation-name: tansformAnimation;
     animation-duration: .5s;
@@ -2510,7 +2514,9 @@ a.hiddenanchor {
     opacity: 0;
     width: 100%}
 .login_form {
-    box-shadow: 1px 1px 1px #9FAFD1;
+    -webkit-box-shadow: 1px 3px 20px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 3px 20px -8px rgba(0,0,0,0.75);
+    box-shadow: 1px 3px 20px -8px rgba(0,0,0,0.75);
     z-index: 22;
     padding-right: 20px;
     padding-left: 20px;

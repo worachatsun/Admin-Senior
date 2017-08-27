@@ -38,7 +38,7 @@ class Login extends Component {
                 <div className="login_form">
                     <section className="login_content">
                         <form onSubmit={this.onSignIn}>
-                            <h1>Admin</h1>
+                            <h1>Administrator</h1>
                             <div>
                                 <input type="text" className="form-control" placeholder="Username" required="" />
                             </div>
